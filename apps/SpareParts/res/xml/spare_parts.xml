@@ -53,6 +53,12 @@
         android:title="@string/extra_title">
 
        <CheckBoxPreference
+            android:key="use_rotary_lockscreen"
+            android:title="@string/title_use_rotary_lockscreen"
+            android:summaryOn="@string/summary_on_use_rotary_lockscreen"
+            android:summaryOff="@string/summary_off_use_rotary_lockscreen" />
+
+       <CheckBoxPreference
             android:key="menu_unlock_screen"
             android:title="@string/title_menu_unlock_screen"
             android:summaryOn="@string/summary_on_menu_unlock_screen"
@@ -63,12 +69,6 @@
             android:title="@string/title_launcher_orientation"
             android:summaryOn="@string/summary_on_launcher_orientation"
             android:summaryOff="@string/summary_off_launcher_orientation" />
-
-       <CheckBoxPreference
-            android:key="use_rotary_lockscreen"
-            android:title="@string/title_use_rotary_lockscreen"
-            android:summaryOn="@string/summary_on_use_rotary_lockscreen"
-            android:summaryOff="@string/summary_off_use_rotary_lockscreen" />
 
        <CheckBoxPreference
             android:key="display_clock"

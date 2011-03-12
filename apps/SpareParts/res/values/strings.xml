@@ -35,6 +35,10 @@
     
     <!-- extra -->
     <string name="extra_title">Extras</string>
+    <string name="title_use_rotary_lockscreen">Rotary Lockscreen</string>
+    <string name="summary_on_use_rotary_lockscreen">Disable Rotary Lockscreen"</string>
+    <string name="summary_off_use_rotary_lockscreen">Enable Rotary Lockscreen"</string>
+
     <string name="title_menu_unlock_screen">Menu button unlock</string>
     <string name="summary_on_menu_unlock_screen">Disable Menu button unlock</string>
     <string name="summary_off_menu_unlock_screen">Enable Menu button unlock</string>
@@ -42,10 +46,6 @@
     <string name="title_launcher_orientation">Launcher Orientation</string>
     <string name="summary_on_launcher_orientation">Disable Launcher rotation"</string>
     <string name="summary_off_launcher_orientation">Enable Launcher rotation"</string>
-
-    <string name="title_use_rotary_lockscreen">Rotary Lockscreen</string>
-    <string name="summary_on_use_rotary_lockscreen">Disable Rotary Lockscreen"</string>
-    <string name="summary_off_use_rotary_lockscreen">Enable Rotary Lockscreen"</string>
 
     <string name="title_display_clock">Status Bar Clock</string>
     <string name="summary_on_display_clock">Disable clock in status bar"</string>

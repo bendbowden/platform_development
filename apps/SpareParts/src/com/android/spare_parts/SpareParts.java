@@ -52,9 +52,9 @@ public class SpareParts extends PreferenceActivity
     private static final String USAGE_STATISTICS_PREF = "usage_statistics_settings";
     
     //extra
+    private static final String USE_ROTARY_LOCKSCREEN_PREF = "use_rotary_lockscreen";
     private static final String MENU_UNLOCK_SCREEN_PREF = "menu_unlock_screen";
     private static final String LAUNCHER_ORIENTATION_PREF = "launcher_orientation";
-    private static final String USE_ROTARY_LOCKSCREEN_PREF = "use_rotary_lockscreen";
     private static final String DISPLAY_CLOCK_PREF = "display_clock";
     private static final String CLOCK_COLOR_PREF = "clock_color";
     private static final String BATTERY_PERCENTAGE_PREF = "battery_percentage";
@@ -67,9 +67,9 @@ public class SpareParts extends PreferenceActivity
     private static final String KEY_COMPATIBILITY_MODE = "compatibility_mode";
 
     //extra
+    private CheckBoxPreference mUseRotaryLockscreenPref;
     private CheckBoxPreference mMenuUnlockScreenPref;
     private CheckBoxPreference mLauncherOrientationPref;
-    private CheckBoxPreference mUseRotaryLockscreenPref;
     private CheckBoxPreference mDisplayClockPref;
     private Preference mClockColorPref;
     private CheckBoxPreference mBatteryPercentagePref;
@@ -126,9 +126,9 @@ public class SpareParts extends PreferenceActivity
         PreferenceScreen prefSet = getPreferenceScreen();
         
         //extra
+        mUseRotaryLockscreenPref = (CheckBoxPreference) prefSet.findPreference(USE_ROTARY_LOCKSCREEN_PREF);
         mMenuUnlockScreenPref = (CheckBoxPreference) prefSet.findPreference(MENU_UNLOCK_SCREEN_PREF);
         mLauncherOrientationPref = (CheckBoxPreference) prefSet.findPreference(LAUNCHER_ORIENTATION_PREF);
-        mUseRotaryLockscreenPref = (CheckBoxPreference) prefSet.findPreference(USE_ROTARY_LOCKSCREEN_PREF);
         mDisplayClockPref = (CheckBoxPreference) prefSet.findPreference(DISPLAY_CLOCK_PREF);
         mClockColorPref = prefSet.findPreference(CLOCK_COLOR_PREF);
         mBatteryPercentagePref = (CheckBoxPreference) prefSet.findPreference(BATTERY_PERCENTAGE_PREF);
@@ -160,15 +160,15 @@ public class SpareParts extends PreferenceActivity
 
     private void updateToggles() {
         //extra
+        mUseRotaryLockscreenPref.setChecked(Settings.System.getInt(
+                getContentResolver(),
+                Settings.System.USE_ROTARY_LOCKSCREEN, 0) != 0);
         mMenuUnlockScreenPref.setChecked(Settings.System.getInt(
                 getContentResolver(), 
                 Settings.System.MENU_UNLOCK_SCREEN, 0) != 0);
         mLauncherOrientationPref.setChecked(Settings.System.getInt(
                 getContentResolver(), 
                 Settings.System.LAUNCHER_ORIENTATION, 0) != 0);
-        mUseRotaryLockscreenPref.setChecked(Settings.System.getInt(
-                getContentResolver(),
-                Settings.System.USE_ROTARY_LOCKSCREEN, 0) != 0);
         mDisplayClockPref.setChecked(Settings.System.getInt(
                 getContentResolver(), 
                 Settings.System.DISPLAY_CLOCK, 0) != 0);
@@ -280,7 +280,11 @@ public class SpareParts extends PreferenceActivity
 
     public void onSharedPreferenceChanged(SharedPreferences preferences, String key) {
         //extra
-        if (MENU_UNLOCK_SCREEN_PREF.equals(key)) {
+        if (USE_ROTARY_LOCKSCREEN_PREF.equals(key)) {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.USE_ROTARY_LOCKSCREEN,
+                    mUseRotaryLockscreenPref.isChecked() ? 1 : 0);
+        } else if (MENU_UNLOCK_SCREEN_PREF.equals(key)) {
             Settings.System.putInt(getContentResolver(),
                     Settings.System.MENU_UNLOCK_SCREEN,
                     mMenuUnlockScreenPref.isChecked() ? 1 : 0);
@@ -288,10 +292,6 @@ public class SpareParts extends PreferenceActivity
             Settings.System.putInt(getContentResolver(),
                     Settings.System.LAUNCHER_ORIENTATION,
                     mLauncherOrientationPref.isChecked() ? 1 : 0);
-        } else if (USE_ROTARY_LOCKSCREEN_PREF.equals(key)) {
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.USE_ROTARY_LOCKSCREEN,
-                    mUseRotaryLockscreenPref.isChecked() ? 1 : 0);
         } else if (DISPLAY_CLOCK_PREF.equals(key)) {
             Settings.System.putInt(getContentResolver(),
                     Settings.System.DISPLAY_CLOCK,
