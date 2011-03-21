@@ -35,9 +35,9 @@
     
     <!-- extra -->
     <string name="extra_title">Extras</string>
-    <string name="title_use_rotary_lockscreen">Rotary Lockscreen</string>
-    <string name="summary_on_use_rotary_lockscreen">Disable Rotary Lockscreen"</string>
-    <string name="summary_off_use_rotary_lockscreen">Enable Rotary Lockscreen"</string>
+    <string name="title_use_rotary_lockscreen">Use Rotary Lockscreen</string>
+    <string name="summary_on_use_rotary_lockscreen">Rotary Lockscreen is enabled</string>
+    <string name="summary_off_use_rotary_lockscreen">Rotary Lockscreen is disabled</string>
 
     <string name="title_menu_unlock_screen">Menu button unlock</string>
     <string name="summary_on_menu_unlock_screen">Disable Menu button unlock</string>
