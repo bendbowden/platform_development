@@ -31,36 +31,45 @@
     <string name="title_usage_statistics">Usage statistics</string>
     <string name="summary_usage_statistics">Summary of application usage</string>
     
-    <string name="general_title">General</string>
-    
-    <!-- extra -->
-    <string name="extra_title">Extras</string>
-    <string name="title_use_rotary_lockscreen">Rotary Lockscreen</string>
-    <string name="summary_on_use_rotary_lockscreen">Disable Rotary Lockscreen"</string>
-    <string name="summary_off_use_rotary_lockscreen">Enable Rotary Lockscreen"</string>
+    <!-- Lockscreen options -->
+    <string name="lockscreen_options_title">Lockscreen options</string>
+    <string name="title_use_rotary_lockscreen">Rotary lockscreen</string>
+    <string name="summary_on_use_rotary_lockscreen">Rotary lockscreen is enabled</string>
+    <string name="summary_off_use_rotary_lockscreen">Rotary lockscreen is disabled</string>
 
     <string name="title_menu_unlock_screen">Menu button unlock</string>
-    <string name="summary_on_menu_unlock_screen">Disable Menu button unlock</string>
-    <string name="summary_off_menu_unlock_screen">Enable Menu button unlock</string>
+    <string name="summary_on_menu_unlock_screen">Menu button unlock is enabled</string>
+    <string name="summary_off_menu_unlock_screen">Menu button unlock is disabled</string>
+    <!-- End lockscreen options -->
 
-    <string name="title_launcher_orientation">Launcher Orientation</string>
-    <string name="summary_on_launcher_orientation">Disable Launcher rotation"</string>
-    <string name="summary_off_launcher_orientation">Enable Launcher rotation"</string>
+    <!-- Launcher options -->
+    <string name="launcher_options_title">Launcher options</string>
 
-    <string name="title_display_clock">Status Bar Clock</string>
-    <string name="summary_on_display_clock">Disable clock in status bar"</string>
-    <string name="summary_off_display_clock">Enable clock in status bar"</string>
+    <string name="title_launcher_orientation">Launcher orientation</string>
+    <string name="summary_on_launcher_orientation">Launcher rotation is enabled"</string>
+    <string name="summary_off_launcher_orientation">Launcher rotation is disabled"</string>
+    <!-- End launcher options -->
+
+    <!-- Status bar options -->
+    <string name="statusbar_options_title">Status bar options</string>
+
+    <string name="title_display_clock">Status bar clock</string>
+    <string name="summary_on_display_clock">Clock in status bar is enabled"</string>
+    <string name="summary_off_display_clock">Clock in status bar is disabled"</string>
 
     <string name="title_clock_color">Clock color</string>
     <string name="summary_clock_color">Change clock color</string>
 
     <string name="title_battery_percentage">Show battery percentage</string>
-    <string name="summary_on_battery_percentage">Disable battery percentage</string>
-    <string name="summary_off_battery_percentage">Enable battery percentage</string>
+    <string name="summary_on_battery_percentage">Battery percentage is enabled</string>
+    <string name="summary_off_battery_percentage">Battery percentage is disabled</string>
 
     <string name="title_battery_color">Battery percentage color</string>
     <string name="summary_battery_color">Change battery percentage color</string>
-    <!-- end extra -->
+    <!-- end status bar options -->
+
+    <!-- Animation options -->
+    <string name="animation_options_title">Animation options</string>
 
     <string name="title_window_animations">Window animations</string>
     <string name="summary_window_animations">Speed of animations in individual windows</string>
@@ -73,25 +82,14 @@
     <string name="title_fancy_ime_animations">Fancy input animations</string>
     <string name="summary_on_fancy_ime_animations">Use fancier animations for input method windows</string>
     <string name="summary_off_fancy_ime_animations">Use normal animations for input method windows</string>
-    
-    <string name="title_haptic_feedback">Haptic feedback</string>
-    <string name="summary_on_haptic_feedback">Use haptic feedback with user interaction</string>
-    <string name="summary_off_haptic_feedback">Use haptic feedback with user interaction</string>
-    
-    <string name="title_font_size">Font size</string>
-    <string name="summary_font_size">Overall size of fonts</string>
-    <string name="dialog_title_font_size">Select font size</string>
-    
-    <string name="title_end_button">End button behavior</string>
-    <string name="summary_end_button">Select End (red) button action</string>
-    <string name="dialog_title_end_button">Select End button</string>
-    
-    <string name="applications_title">Applications</string>
+    <!-- End animation options -->
+
+    <string name="extras_title">Extras</string>
     
     <!-- Sound & display settings screen, compatibility mode check box label -->
-    <string name="compatibility_mode_title">Compatibility Mode</string>
+    <string name="compatibility_mode_title">Compatibility mode</string>
     <!-- Sound & display settings screen, compatibility mode option summary text when check box is selected -->
-    <string name="compatibility_mode_summary_on">Run older apps in Compatibility mode. This require rebooting. </string>
+    <string name="compatibility_mode_summary_on">Run older apps in compatibility mode. This requires rebooting. </string>
     <!-- Sound & display settings screen, compatibility mode option summary text when check box is clear -->
-    <string name="compatibility_mode_summary_off">Run older apps in Compatibility mode. This require rebooting. </string>
+    <string name="compatibility_mode_summary_off">Run older apps in compatibility mode. This requires rebooting. </string>
 </resources>

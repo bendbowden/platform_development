@@ -48,9 +48,9 @@
     </PreferenceCategory>
             
 
-    <!-- extra -->
+    <!-- lockscreen options -->
     <PreferenceCategory
-        android:title="@string/extra_title">
+        android:title="@string/lockscreen_options_title">
 
        <CheckBoxPreference
             android:key="use_rotary_lockscreen"
@@ -64,11 +64,12 @@
             android:summaryOn="@string/summary_on_menu_unlock_screen"
             android:summaryOff="@string/summary_off_menu_unlock_screen" />
 
-       <CheckBoxPreference
-            android:key="launcher_orientation"
-            android:title="@string/title_launcher_orientation"
-            android:summaryOn="@string/summary_on_launcher_orientation"
-            android:summaryOff="@string/summary_off_launcher_orientation" />
+    </PreferenceCategory>
+    <!-- end lockscreen options -->
+
+    <!-- status bar options -->    
+    <PreferenceCategory
+        android:title="@string/statusbar_options_title">
 
        <CheckBoxPreference
             android:key="display_clock"
@@ -97,10 +98,24 @@
                 android:defaultValue="-1" />
 
     </PreferenceCategory>
-    <!-- end -->
+    <!-- end status bar options -->
 
+    <!-- launcher options -->
     <PreferenceCategory
-        android:title="@string/general_title">
+        android:title="@string/launcher_options_title">
+
+       <CheckBoxPreference
+            android:key="launcher_orientation"
+            android:title="@string/title_launcher_orientation"
+            android:summaryOn="@string/summary_on_launcher_orientation"
+            android:summaryOff="@string/summary_off_launcher_orientation" />
+
+    </PreferenceCategory>
+    <!-- end launcher options -->
+
+    <!-- animation options -->
+    <PreferenceCategory
+        android:title="@string/animation_options_title">
         
         <ListPreference
                 android:key="window_animations"
@@ -124,11 +139,18 @@
             android:summaryOn="@string/summary_on_fancy_ime_animations"
             android:summaryOff="@string/summary_off_fancy_ime_animations"/>
 
+    </PreferenceCategory>
+    <!-- end animation options -->
+
+    <PreferenceCategory
+        android:title="@string/extras_title">
+
         <CheckBoxPreference
                 android:key="compatibility_mode"
                 android:title="@string/compatibility_mode_title"
                 android:summaryOn="@string/compatibility_mode_summary_on"
                 android:summaryOff="@string/compatibility_mode_summary_off" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
