@@ -52,13 +52,30 @@
     <PreferenceCategory
         android:title="@string/lockscreen_options_title">
 
-       <CheckBoxPreference
-            android:key="use_rotary_lockscreen"
-            android:title="@string/title_use_rotary_lockscreen"
-            android:summaryOn="@string/summary_on_use_rotary_lockscreen"
-            android:summaryOff="@string/summary_off_use_rotary_lockscreen" />
+        <ListPreference android:key="pref_lockscreen_style"
+            android:dialogTitle="@string/pref_lockscreen_style_title"
+            android:title="@string/pref_lockscreen_style_title"
+            android:summary="@string/pref_lockscreen_style_summary"
+            android:entries="@array/pref_lockscreen_style_entries"
+            android:entryValues="@array/pref_lockscreen_style_values" />
 
-       <CheckBoxPreference
+        <CheckBoxPreference android:key="pref_lockscreen_custom_app_toggle"
+            android:title="@string/pref_lockscreen_custom_app_toggle_title"
+            android:summary="@string/pref_lockscreen_custom_app_toggle_summary" />
+
+        <Preference android:key="pref_lockscreen_custom_app_activity"
+            android:dependency="pref_lockscreen_custom_app_toggle"
+            android:title="@string/pref_lockscreen_custom_app_activity_title" />
+
+        <CheckBoxPreference android:key="pref_lockscreen_rotary_unlock_down_toggle"
+            android:title="@string/pref_lockscreen_rotary_unlock_down_title"
+            android:summary="@string/pref_lockscreen_rotary_unlock_down_summary" />
+
+        <CheckBoxPreference android:key="pref_lockscreen_rotary_hide_arrows_toggle"
+            android:title="@string/pref_lockscreen_rotary_hide_arrows_title"
+            android:summary="@string/pref_lockscreen_rotary_hide_arrows_summary" />
+
+        <CheckBoxPreference
             android:key="menu_unlock_screen"
             android:title="@string/title_menu_unlock_screen"
             android:summaryOn="@string/summary_on_menu_unlock_screen"
@@ -109,13 +126,6 @@
             android:title="@string/title_launcher_orientation"
             android:summaryOn="@string/summary_on_launcher_orientation"
             android:summaryOff="@string/summary_off_launcher_orientation" />
-
-    </PreferenceCategory>
-    <!-- end launcher options -->
-
-    <!-- animation options -->
-    <PreferenceCategory
-        android:title="@string/animation_options_title">
         
         <ListPreference
                 android:key="window_animations"

@@ -20,6 +20,7 @@
 <resources>
     <string name="app_label">Spare Parts</string>
 
+    <!-- Device info -->
     <string name="device_info_title">Device info</string>
     
     <string name="title_battery_history">Battery history</string>
@@ -27,49 +28,61 @@
     
     <string name="title_battery_information">Battery information</string>
     <string name="summary_battery_information">Current battery status information</string>
+    <!-- End device info -->
     
     <string name="title_usage_statistics">Usage statistics</string>
     <string name="summary_usage_statistics">Summary of application usage</string>
     
     <!-- Lockscreen options -->
     <string name="lockscreen_options_title">Lockscreen options</string>
-    <string name="title_use_rotary_lockscreen">Rotary lockscreen</string>
-    <string name="summary_on_use_rotary_lockscreen">Rotary lockscreen is enabled</string>
-    <string name="summary_off_use_rotary_lockscreen">Rotary lockscreen is disabled</string>
+
+    <string name="pref_lockscreen_style_title">Lockscreen style</string>
+    <string name="pref_lockscreen_style_summary">Choose the style of the lockscreen</string>
+
+    <string name="pref_lockscreen_custom_app_toggle_title">Custom app starter</string>
+    <string name="pref_lockscreen_custom_app_toggle_summary">Shows a second slider on sliding style. Shows a custom app dimple on rotary style</string>
+
+    <string name="pref_lockscreen_custom_app_activity_title">Custom application</string>
+
+    <string name="pref_lockscreen_rotary_unlock_down_title">Drag down to unlock</string>
+    <string name="pref_lockscreen_rotary_unlock_down_summary">Dragging down rotary wheel unlocks. Dragging right starts custom app</string>
+
+    <string name="pref_lockscreen_rotary_hide_arrows_title">Hide rotary arrows</string>
+    <string name="pref_lockscreen_rotary_hide_arrows_summary">Hides the directional hint arrows on rotary style</string>
 
     <string name="title_menu_unlock_screen">Menu button unlock</string>
-    <string name="summary_on_menu_unlock_screen">Menu button unlock is enabled</string>
-    <string name="summary_off_menu_unlock_screen">Menu button unlock is disabled</string>
+    <string name="summary_on_menu_unlock_screen">Use menu button to unlock device</string>
+    <string name="summary_off_menu_unlock_screen">Use menu button to unlock device</string>
+
+    <string name="group_applications">Applications</string>
+
+    <string name="select_custom_app_title">Select custom application</string>
     <!-- End lockscreen options -->
-
-    <!-- Launcher options -->
-    <string name="launcher_options_title">Launcher options</string>
-
-    <string name="title_launcher_orientation">Launcher orientation</string>
-    <string name="summary_on_launcher_orientation">Launcher rotation is enabled"</string>
-    <string name="summary_off_launcher_orientation">Launcher rotation is disabled"</string>
-    <!-- End launcher options -->
 
     <!-- Status bar options -->
     <string name="statusbar_options_title">Status bar options</string>
 
     <string name="title_display_clock">Status bar clock</string>
-    <string name="summary_on_display_clock">Clock in status bar is enabled"</string>
-    <string name="summary_off_display_clock">Clock in status bar is disabled"</string>
+    <string name="summary_on_display_clock">Show or hide clock in status bar</string>
+    <string name="summary_off_display_clock">Show or hide clock in status bar</string>
 
     <string name="title_clock_color">Clock color</string>
     <string name="summary_clock_color">Change clock color</string>
 
-    <string name="title_battery_percentage">Show battery percentage</string>
-    <string name="summary_on_battery_percentage">Battery percentage is enabled</string>
-    <string name="summary_off_battery_percentage">Battery percentage is disabled</string>
+    <string name="title_battery_percentage">Battery percentage</string>
+    <string name="summary_on_battery_percentage">Show or hide accurate battery text</string>
+    <string name="summary_off_battery_percentage">Show or hide accurate battery text</string>
 
     <string name="title_battery_color">Battery percentage color</string>
     <string name="summary_battery_color">Change battery percentage color</string>
-    <!-- end status bar options -->
+    <!-- End status bar options -->
 
-    <!-- Animation options -->
-    <string name="animation_options_title">Animation options</string>
+    <!-- Launcher options -->
+    <string name="launcher_options_title">Launcher options</string>
+
+    <string name="title_launcher_orientation">Launcher orientation</string>
+    <string name="summary_on_launcher_orientation">Allows launcher rotation to match position of the phone</string>
+    <string name="summary_off_launcher_orientation">Allows launcher rotation to match position of the phone</string>
 
     <string name="title_window_animations">Window animations</string>
     <string name="summary_window_animations">Speed of animations in individual windows</string>
@@ -82,8 +95,9 @@
     <string name="title_fancy_ime_animations">Fancy input animations</string>
     <string name="summary_on_fancy_ime_animations">Use fancier animations for input method windows</string>
     <string name="summary_off_fancy_ime_animations">Use normal animations for input method windows</string>
-    <!-- End animation options -->
+    <!-- End launcher options -->
 
+    <!-- Extras -->
     <string name="extras_title">Extras</string>
     
     <!-- Sound & display settings screen, compatibility mode check box label -->
