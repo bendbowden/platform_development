@@ -81,7 +81,7 @@ public class SpareParts extends PreferenceActivity
     private static final String KEY_COMPATIBILITY_MODE = "compatibility_mode";
 
     //extra
-    private ListPreference mLockscreenStylePref;
+    private ListPreference mLockScreenStylePref;
     private CheckBoxPreference mCustomAppTogglePref;
     private CheckBoxPreference mRotaryUnlockDownToggle;
     private CheckBoxPreference mRotaryHideArrowsToggle;
@@ -151,22 +151,45 @@ public class SpareParts extends PreferenceActivity
 
         PreferenceScreen prefSet = getPreferenceScreen();
         
-        //lockscreen style
-        mLockscreenStylePref = (ListPreference) prefSet.findPreference(LOCKSCREEN_STYLE_PREF);
-        int lockscreenStyle = Settings.System.getInt(getContentResolver(),
-                Settings.System.LOCKSCREEN_STYLE_PREF, 1);
-        mLockscreenStylePref.setValue(String.valueOf(lockscreenStyle));
-        mLockscreenStylePref.setOnPreferenceChangeListener(this);
-	//phone & messaging tabs
-        mCustomAppTogglePref = (CheckBoxPreference) prefSet.findPreference(LOCKSCREEN_CUSTOM_APP_TOGGLE);
-        mRotaryUnlockDownToggle = (CheckBoxPreference) prefSet.findPreference(LOCKSCREEN_ROTARY_UNLOCK_DOWN_TOGGLE);
-         mRotaryHideArrowsToggle = (CheckBoxPreference) prefSet.findPreference(LOCKSCREEN_ROTARY_HIDE_ARROWS_TOGGLE);
-        mCustomAppActivityPref = (Preference) prefSet.findPreference(LOCKSCREEN_CUSTOM_APP_ACTIVITY);
+        //lockscreen options
+        mLockScreenStylePref = (ListPreference) prefSet.findPreference(LOCKSCREEN_STYLE_PREF);
+        int lockScreenStyle = Settings.System.getInt(getContentResolver(),
+                Settings.System.LOCKSCREEN_STYLE_PREF, 3);
+        mLockScreenStylePref.setValue(String.valueOf(lockScreenStyle));
+        mLockScreenStylePref.setOnPreferenceChangeListener(this);
+
+        mRotaryUnlockDownToggle = (CheckBoxPreference) prefSet
+                .findPreference(LOCKSCREEN_ROTARY_UNLOCK_DOWN_TOGGLE);
+        mRotaryUnlockDownToggle.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.System.LOCKSCREEN_ROTARY_UNLOCK_DOWN, 0) == 1);
+
+        mRotaryHideArrowsToggle = (CheckBoxPreference) prefSet
+                .findPreference(LOCKSCREEN_ROTARY_HIDE_ARROWS_TOGGLE);
+        mRotaryHideArrowsToggle.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.System.LOCKSCREEN_ROTARY_HIDE_ARROWS, 0) == 1);
+
+        mCustomAppTogglePref = (CheckBoxPreference) prefSet
+                .findPreference(LOCKSCREEN_CUSTOM_APP_TOGGLE);
+        mCustomAppTogglePref.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.System.LOCKSCREEN_CUSTOM_APP_TOGGLE, 0) == 1);
+
+       updateStylePrefs(lockScreenStyle);
+
+        mCustomAppActivityPref = (Preference) prefSet
+                .findPreference(LOCKSCREEN_CUSTOM_APP_ACTIVITY);
+
         mMenuUnlockScreenPref = (CheckBoxPreference) prefSet.findPreference(MENU_UNLOCK_SCREEN_PREF);
+
+	//end lockscreen options
+
         mLauncherOrientationPref = (CheckBoxPreference) prefSet.findPreference(LAUNCHER_ORIENTATION_PREF);
+
         mDisplayClockPref = (CheckBoxPreference) prefSet.findPreference(DISPLAY_CLOCK_PREF);
+
         mClockColorPref = prefSet.findPreference(CLOCK_COLOR_PREF);
+
         mBatteryPercentagePref = (CheckBoxPreference) prefSet.findPreference(BATTERY_PERCENTAGE_PREF);
+
         mBatteryColorPref = prefSet.findPreference(BATTERY_COLOR_PREF);
         //end extra
 
@@ -223,10 +246,11 @@ public class SpareParts extends PreferenceActivity
     }
     
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mLockscreenStylePref) {
-            int lockscreenStyle = Integer.valueOf((String) newValue);
+        if (preference == mLockScreenStylePref) {
+            int lockScreenStyle = Integer.valueOf((String) newValue);
             Settings.System.putInt(getContentResolver(), Settings.System.LOCKSCREEN_STYLE_PREF,
-                    lockscreenStyle);
+                    lockScreenStyle);
+            updateStylePrefs(lockScreenStyle);
         } else if (preference == mWindowAnimationsPref) {
             writeAnimationPreference(0, newValue);
         } else if (preference == mTransitionAnimationsPref) {
@@ -238,7 +262,25 @@ public class SpareParts extends PreferenceActivity
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-        if (preference == mCompatibilityMode) {
+	boolean value;
+        if (preference == mCustomAppTogglePref) {
+            value = mCustomAppTogglePref.isChecked();
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.LOCKSCREEN_CUSTOM_APP_TOGGLE, value ? 1 : 0);
+            int lockscreenStyle = Settings.System.getInt(getContentResolver(),
+                    Settings.System.LOCKSCREEN_STYLE_PREF, 3);
+            updateStylePrefs(lockscreenStyle);
+            return true;
+        } else if (preference == mRotaryUnlockDownToggle) {
+            value = mRotaryUnlockDownToggle.isChecked();
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.LOCKSCREEN_ROTARY_UNLOCK_DOWN, value ? 1 : 0);
+            return true;
+        } else if (preference == mRotaryHideArrowsToggle) {
+            value = mRotaryHideArrowsToggle.isChecked();
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.LOCKSCREEN_ROTARY_HIDE_ARROWS, value ? 1 : 0);
+        } else if (preference == mCompatibilityMode) {
             Settings.System.putInt(getContentResolver(),
                     Settings.System.COMPATIBILITY_MODE,
                     mCompatibilityMode.isChecked() ? 1 : 0);
@@ -262,7 +304,6 @@ public class SpareParts extends PreferenceActivity
 	}
         //end extra
         return false;
-
     }
 
     public void writeAnimationPreference(int which, Object objValue) {
@@ -444,13 +485,39 @@ public class SpareParts extends PreferenceActivity
                 Settings.System.LOCKSCREEN_CUSTOM_APP_ACTIVITY));
     }
 
-    private boolean isDefaultLockscreenStyle() {
-        int lockscreenStyle = Settings.System.getInt(getContentResolver(),
-                Settings.System.LOCKSCREEN_STYLE_PREF, 1);
-        if (lockscreenStyle == 1) {
-            return true;
-        } else {
-            return false;
+    private void updateStylePrefs(int lockScreenStyle) {
+        // slider style
+        if (lockScreenStyle == 1 || lockScreenStyle == 4) {
+            mRotaryHideArrowsToggle.setChecked(false);
+            mRotaryHideArrowsToggle.setEnabled(false);
+            mRotaryUnlockDownToggle.setChecked(false);
+            mRotaryUnlockDownToggle.setEnabled(false);
+            // rotary and rotary revamped style
+        } else if (lockScreenStyle == 2 || lockScreenStyle == 3) {
+            mRotaryHideArrowsToggle.setEnabled(true);
+            if (mCustomAppTogglePref.isChecked() == true) {
+                mRotaryUnlockDownToggle.setEnabled(true);
+            } else {
+                mRotaryUnlockDownToggle.setChecked(false);
+                mRotaryUnlockDownToggle.setEnabled(false);
+            }
         }
+        // disable custom app starter for lense - would be ugly in above if
+        // statement
+        if (lockScreenStyle == 4) {
+            mCustomAppTogglePref.setChecked(false);
+            mCustomAppTogglePref.setEnabled(false);
+        } else {
+            mCustomAppTogglePref.setEnabled(true);
+        }
+        boolean value = mRotaryUnlockDownToggle.isChecked();
+        Settings.System.putInt(getContentResolver(), Settings.System.LOCKSCREEN_ROTARY_UNLOCK_DOWN,
+                value ? 1 : 0);
+        value = mRotaryHideArrowsToggle.isChecked();
+        Settings.System.putInt(getContentResolver(), Settings.System.LOCKSCREEN_ROTARY_HIDE_ARROWS,
+                value ? 1 : 0);
+        value = mCustomAppTogglePref.isChecked();
+        Settings.System.putInt(getContentResolver(), Settings.System.LOCKSCREEN_CUSTOM_APP_TOGGLE,
+                value ? 1 : 0);
     }
 }
