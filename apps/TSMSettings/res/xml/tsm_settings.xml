@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/*
+* Copyright 2008, The Android Open Source Project
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:tsmsettings="http://schemas.android.com/apk/res/com.android.tsm_settings"
+                  xmlns:tsm="http://schemas.tsm.org/apk/res/android"
+		  >
+
+    <com.android.tsm_settings.widget.IconPreferenceScreen android:key="device"
+        tsmsettings:icon="@drawable/ic_device"
+        android:title="@string/title_device">
+        <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.android.tsm_settings"
+            android:targetClass="com.android.tsm_settings.activity.Device" />
+    
+    </com.android.tsm_settings.widget.IconPreferenceScreen>
+
+    <com.android.tsm_settings.widget.IconPreferenceScreen android:key="galaxy_s_widget"
+        tsmsettings:icon="@drawable/ic_widget"
+        android:title="@string/title_galaxy_s_widget">
+        <intent android:action="android.intent.action.MAIN"
+android:targetPackage="com.android.tsm_settings"
+android:targetClass="com.android.tsm_settings.activity.GalaxySWidget" />
+    
+    </com.android.tsm_settings.widget.IconPreferenceScreen>
+
+    <com.android.tsm_settings.widget.IconPreferenceScreen android:key="lockscreen"
+tsmsettings:icon="@drawable/ic_lockscreen"
+        android:title="@string/title_lockscreen">
+        <intent android:action="android.intent.action.MAIN"
+android:targetPackage="com.android.tsm_settings"
+android:targetClass="com.android.tsm_settings.activity.Lockscreen" />
+    
+    </com.android.tsm_settings.widget.IconPreferenceScreen>
+
+    <com.android.tsm_settings.widget.IconPreferenceScreen android:key="statusbar"
+tsmsettings:icon="@drawable/ic_statusbar"
+        android:title="@string/title_statusbar">
+        <intent android:action="android.intent.action.MAIN"
+android:targetPackage="com.android.tsm_settings"
+android:targetClass="com.android.tsm_settings.activity.Statusbar" />
+    
+    </com.android.tsm_settings.widget.IconPreferenceScreen>
+
+    <com.android.tsm_settings.widget.IconPreferenceScreen android:key="launcher"
+        tsmsettings:icon="@drawable/ic_launcher"
+        android:title="@string/title_launcher">
+        <intent android:action="android.intent.action.MAIN"
+android:targetPackage="com.android.tsm_settings"
+android:targetClass="com.android.tsm_settings.activity.Launcher" />
+    
+    </com.android.tsm_settings.widget.IconPreferenceScreen>
+
+    <com.android.tsm_settings.widget.IconPreferenceScreen android:key="extras"
+tsmsettings:icon="@drawable/ic_extras"
+        android:title="@string/title_extras">
+        <intent android:action="android.intent.action.MAIN"
+android:targetPackage="com.android.tsm_settings"
+android:targetClass="com.android.tsm_settings.activity.Extras" />
+    
+    </com.android.tsm_settings.widget.IconPreferenceScreen>
+
+</PreferenceScreen>

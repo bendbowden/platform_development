@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/* //device/apps/common/assets/res/any/strings.xml
+**
+** Copyright 2006, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+<resources>
+    <string name="app_label">TSM settings</string>
+
+    <!-- Device info -->
+    <string name="device_info_title">Device info</string>
+    
+    <string name="title_battery_history">Battery history</string>
+    <string name="summary_battery_history">Summary of how battery has been used</string>
+    
+    <string name="title_battery_information">Battery information</string>
+    <string name="summary_battery_information">Current battery status information</string>
+    <!-- End device info -->
+    
+    <string name="title_usage_statistics">Usage statistics</string>
+    <string name="summary_usage_statistics">Summary of application usage</string>
+    
+    <!-- Lockscreen options -->
+    <string name="lockscreen_options_title">Lockscreen options</string>
+
+    <string name="pref_lockscreen_style_title">Lockscreen style</string>
+    <string name="pref_lockscreen_style_summary">Choose the style of the lockscreen</string>
+
+    <string name="pref_lockscreen_custom_app_toggle_title">Custom app starter</string>
+    <string name="pref_lockscreen_custom_app_toggle_summary">Shows a second slider on sliding style. Shows a custom app dimple on rotary style</string>
+
+    <string name="pref_lockscreen_custom_app_activity_title">Custom application</string>
+
+    <string name="pref_lockscreen_rotary_unlock_down_title">Drag down to unlock</string>
+    <string name="pref_lockscreen_rotary_unlock_down_summary">Dragging down rotary wheel unlocks. Dragging right starts custom app</string>
+
+    <string name="pref_lockscreen_rotary_hide_arrows_title">Hide rotary arrows</string>
+    <string name="pref_lockscreen_rotary_hide_arrows_summary">Hides the directional hint arrows on rotary style</string>
+
+    <string name="title_menu_unlock_screen">Menu button unlock</string>
+    <string name="summary_on_menu_unlock_screen">Use menu button to unlock device</string>
+    <string name="summary_off_menu_unlock_screen">Use menu button to unlock device</string>
+
+    <string name="group_applications">Applications</string>
+
+    <string name="select_custom_app_title">Select custom application</string>
+    <!-- End lockscreen options -->
+
+    <!-- Status bar options -->
+    <string name="statusbar_options_title">Status bar options</string>
+
+    <string name="title_display_clock">Status bar clock</string>
+    <string name="summary_on_display_clock">Show or hide clock in status bar</string>
+    <string name="summary_off_display_clock">Show or hide clock in status bar</string>
+
+    <string name="title_clock_color">Clock color</string>
+    <string name="summary_clock_color">Change clock color</string>
+
+    <string name="title_battery_percentage">Battery percentage</string>
+    <string name="summary_on_battery_percentage">Show or hide accurate battery text</string>
+    <string name="summary_off_battery_percentage">Show or hide accurate battery text</string>
+
+    <string name="title_battery_color">Battery percentage color</string>
+    <string name="summary_battery_color">Change battery percentage color</string>
+    <!-- End status bar options -->
+
+    <!-- Launcher options -->
+    <string name="launcher_options_title">Launcher options</string>
+
+    <string name="title_launcher_orientation">Launcher orientation</string>
+    <string name="summary_on_launcher_orientation">Allows launcher rotation to match position of the phone</string>
+    <string name="summary_off_launcher_orientation">Allows launcher rotation to match position of the phone</string>
+
+    <string name="title_window_animations">Window animations</string>
+    <string name="summary_window_animations">Speed of animations in individual windows</string>
+    <string name="dialog_title_window_animations">Select window speed</string>
+    
+    <string name="title_transition_animations">Transition animations</string>
+    <string name="summary_transition_animations">Speed of animations moving between screens</string>
+    <string name="dialog_title_transition_animations">Select transition speed</string>
+    
+    <string name="title_fancy_ime_animations">Fancy input animations</string>
+    <string name="summary_on_fancy_ime_animations">Use fancier animations for input method windows</string>
+    <string name="summary_off_fancy_ime_animations">Use normal animations for input method windows</string>
+    <!-- End launcher options -->
+
+    <!-- Extras -->
+    <string name="extras_title">Extras</string>
+    
+    <!-- Sound & display settings screen, compatibility mode check box label -->
+    <string name="compatibility_mode_title">Compatibility mode</string>
+    <!-- Sound & display settings screen, compatibility mode option summary text when check box is selected -->
+    <string name="compatibility_mode_summary_on">Run older apps in compatibility mode. This requires rebooting. </string>
+    <!-- Sound & display settings screen, compatibility mode option summary text when check box is clear -->
+    <string name="compatibility_mode_summary_off">Run older apps in compatibility mode. This requires rebooting. </string>
+    <!-- Settings for the galaxy s power widget -->
+    <string name="power_widget_menu_title">Power widget menu</string>
+    <string name="title_galaxy_s_widget">Power widget</string>
+    <string name="summary_galaxy_s_widget">Manage power widget</string>
+
+        <string name="title_galaxy_s_widget_display">Display power widget</string>
+        <string name="summary_on_galaxy_s_widget_display">The widget will be displayed in the notification pulldown</string>
+        <string name="summary_off_galaxy_s_widget_display">The widget will not be displayed in the notification pulldown</string>
+
+        <string name="title_galaxy_s_widget_indicator_color">Indicator color</string>
+        <string name="summary_galaxy_s_widget_indicator_color">Color of the indicator on the buttons</string>
+
+        <string name="title_galaxy_s_widget_select_buttons">Select buttons</string>
+        <string name="summary_galaxy_s_widget_select_buttons">Select which buttons should be displayed/used</string>
+
+            <string name="summary_on_galaxy_s_widget_select_button_format">The %s button will be displayed</string>
+            <string name="summary_off_galaxy_s_widget_select_button_format">The %s button will not be displayed</string>
+
+        <string name="title_galaxy_s_widget_order_buttons">Order buttons</string>
+        <string name="summary_galaxy_s_widget_order_buttons">Select the order of the buttons in the widget</string>
+
+        <string name="title_device">Device info</string>
+
+        <string name="title_lockscreen">Lockscreen settings</string>
+
+        <string name="title_statusbar">Statusbar settings</string>
+
+        <string name="title_launcher">Launcher settings</string>
+
+        <string name="title_extras">Extras</string>
+</resources>
