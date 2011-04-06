@@ -106,4 +106,24 @@
     <string name="compatibility_mode_summary_on">Run older apps in compatibility mode. This requires rebooting. </string>
     <!-- Sound & display settings screen, compatibility mode option summary text when check box is clear -->
     <string name="compatibility_mode_summary_off">Run older apps in compatibility mode. This requires rebooting. </string>
+    <!-- Settings for the galaxy s power widget -->
+    <string name="power_widget_menu_title">Power widget menu</string>
+    <string name="title_galaxy_s_widget">Power widget</string>
+    <string name="summary_galaxy_s_widget">Manage power widget</string>
+
+        <string name="title_galaxy_s_widget_display">Display power widget</string>
+        <string name="summary_on_galaxy_s_widget_display">The widget will be displayed in the notification pulldown</string>
+        <string name="summary_off_galaxy_s_widget_display">The widget will not be displayed in the notification pulldown</string>
+
+        <string name="title_galaxy_s_widget_indicator_color">Indicator color</string>
+        <string name="summary_galaxy_s_widget_indicator_color">Color of the indicator on the buttons</string>
+
+        <string name="title_galaxy_s_widget_select_buttons">Select buttons</string>
+        <string name="summary_galaxy_s_widget_select_buttons">Select which buttons should be displayed/used</string>
+
+            <string name="summary_on_galaxy_s_widget_select_button_format">The %s button will be displayed</string>
+            <string name="summary_off_galaxy_s_widget_select_button_format">The %s button will not be displayed</string>
+
+        <string name="title_galaxy_s_widget_order_buttons">Order buttons</string>
+        <string name="summary_galaxy_s_widget_order_buttons">Select the order of the buttons in the widget</string>
 </resources>

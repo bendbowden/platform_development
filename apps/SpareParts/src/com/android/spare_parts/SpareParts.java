@@ -2,16 +2,16 @@
 **
 ** Copyright 2006, The Android Open Source Project
 **
-** Licensed under the Apache License, Version 2.0 (the "License"); 
-** you may not use this file except in compliance with the License. 
-** You may obtain a copy of the License at 
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
 **
-**     http://www.apache.org/licenses/LICENSE-2.0 
+** http://www.apache.org/licenses/LICENSE-2.0
 **
-** Unless required by applicable law or agreed to in writing, software 
-** distributed under the License is distributed on an "AS IS" BASIS, 
-** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-** See the License for the specific language governing permissions and 
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
 ** limitations under the License.
 */
 
@@ -180,7 +180,7 @@ public class SpareParts extends PreferenceActivity
 
         mMenuUnlockScreenPref = (CheckBoxPreference) prefSet.findPreference(MENU_UNLOCK_SCREEN_PREF);
 
-	//end lockscreen options
+//end lockscreen options
 
         mLauncherOrientationPref = (CheckBoxPreference) prefSet.findPreference(LAUNCHER_ORIENTATION_PREF);
 
@@ -228,20 +228,20 @@ public class SpareParts extends PreferenceActivity
                 getContentResolver(),
                 Settings.System.LOCKSCREEN_ROTARY_HIDE_ARROWS, 0) != 0);
         mMenuUnlockScreenPref.setChecked(Settings.System.getInt(
-                getContentResolver(), 
+                getContentResolver(),
                 Settings.System.MENU_UNLOCK_SCREEN, 0) != 0);
         mLauncherOrientationPref.setChecked(Settings.System.getInt(
-                getContentResolver(), 
+                getContentResolver(),
                 Settings.System.LAUNCHER_ORIENTATION, 0) != 0);
         mDisplayClockPref.setChecked(Settings.System.getInt(
-                getContentResolver(), 
+                getContentResolver(),
                 Settings.System.DISPLAY_CLOCK, 0) != 0);
         mBatteryPercentagePref.setChecked(Settings.System.getInt(
-                getContentResolver(), 
+                getContentResolver(),
                 Settings.System.BATTERY_PERCENTAGE, 0) != 0);
         //end extra
         mFancyImeAnimationsPref.setChecked(Settings.System.getInt(
-                getContentResolver(), 
+                getContentResolver(),
                 Settings.System.FANCY_IME_ANIMATIONS, 0) != 0);
     }
     
@@ -262,7 +262,7 @@ public class SpareParts extends PreferenceActivity
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-	boolean value;
+boolean value;
         if (preference == mCustomAppTogglePref) {
             value = mCustomAppTogglePref.isChecked();
             Settings.System.putInt(getContentResolver(),
@@ -291,17 +291,17 @@ public class SpareParts extends PreferenceActivity
             ColorPickerDialog cp = new ColorPickerDialog(this,
             mClockFontColorListener,
             readClockFontColor());
-            cp.show();            
+            cp.show();
         }
         else if (preference == mBatteryColorPref) {
             ColorPickerDialog cp = new ColorPickerDialog(this,
             mBatteryFontColorListener,
             readBatteryFontColor());
-            cp.show();            
+            cp.show();
         }
         else if (preference == mCustomAppActivityPref) {
             pickShortcut(4);
-	}
+}
         //end extra
         return false;
     }
@@ -415,7 +415,7 @@ public class SpareParts extends PreferenceActivity
             return -16777216;
         }
     }
-    ColorPickerDialog.OnColorChangedListener mClockFontColorListener = 
+    ColorPickerDialog.OnColorChangedListener mClockFontColorListener =
         new ColorPickerDialog.OnColorChangedListener() {
             public void colorChanged(int color) {
                 Settings.System.putInt(getContentResolver(), Settings.System.CLOCK_COLOR, color);
@@ -429,7 +429,7 @@ public class SpareParts extends PreferenceActivity
             return -1;
         }
     }
-    ColorPickerDialog.OnColorChangedListener mBatteryFontColorListener = 
+    ColorPickerDialog.OnColorChangedListener mBatteryFontColorListener =
         new ColorPickerDialog.OnColorChangedListener() {
             public void colorChanged(int color) {
                 Settings.System.putInt(getContentResolver(), Settings.System.BATTERY_COLOR, color);
