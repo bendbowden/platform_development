@@ -40,8 +40,8 @@ public class GalaxySWidgetUtil {
                 BUTTON_AIRPLANE, "Airplane mode", R.drawable.stat_airplane_on));
         BUTTONS.put(BUTTON_AUTOROTATE, new GalaxySWidgetUtil.ButtonInfo(
                 BUTTON_AUTOROTATE, "Auto-rotate", R.drawable.stat_orientation_on));
-/*BUTTONS.put(BUTTON_BLUETOOTH, new GalaxySWidgetUtil.ButtonInfo(
-BUTTON_BLUETOOTH, "Bluetooth", R.drawable.stat_bluetooth_on));*/
+        BUTTONS.put(BUTTON_BLUETOOTH, new GalaxySWidgetUtil.ButtonInfo(
+                BUTTON_BLUETOOTH, "Bluetooth", R.drawable.stat_bluetooth_on));
         BUTTONS.put(BUTTON_BRIGHTNESS, new GalaxySWidgetUtil.ButtonInfo(
                 BUTTON_BRIGHTNESS, "Brightness", R.drawable.stat_brightness_on));
         BUTTONS.put(BUTTON_FLASHLIGHT, new GalaxySWidgetUtil.ButtonInfo(
@@ -76,16 +76,9 @@ BUTTON_WIFIAP, "Wireless access-point", R.drawable.stat_wifi_ap_on));*/
 
     private static final String BUTTON_DELIMITER = "|";
     private static final String BUTTONS_DEFAULT = BUTTON_WIFI
-                             + BUTTON_DELIMITER + BUTTON_MOBILEDATA
+                             + BUTTON_DELIMITER + BUTTON_BLUETOOTH
                              + BUTTON_DELIMITER + BUTTON_GPS
                              + BUTTON_DELIMITER + BUTTON_SOUND;
-			     + BUTTON_DELIMITER + BUTTON_SYNC;
-			     + BUTTON_DELIMITER + BUTTON_AUTOROTATE;
-			     + BUTTON_DELIMITER + BUTTON_FLASHLIGHT;
-			     + BUTTON_DELIMITER + BUTTON_SCREENTIMEOUT;
-			     + BUTTON_DELIMITER + BUTTON_MEDIA_PREVIOUS;
-			     + BUTTON_DELIMITER + BUTTON_MEDIA_PLAY_PAUSE;
-			     + BUTTON_DELIMITER + BUTTON_MEDIA_NEXT;
 
     public static String getCurrentButtons(Context context) {
         String buttons = Settings.System.getString(context.getContentResolver(), Settings.System.GALAXY_S_WIDGET_BUTTONS);
@@ -153,4 +146,3 @@ BUTTON_WIFIAP, "Wireless access-point", R.drawable.stat_wifi_ap_on));*/
         public int getIcon() { return mIcon; }
     }
 }
-
