@@ -131,13 +131,16 @@
 
         <string name="title_lockscreen">Lockscreen settings</string>
 
-        <string name="title_statusbar">Statusbar settings</string>
+        <string name="title_statusbar">Statusbar tweaks</string>
 
-        <string name="title_launcher">Launcher settings</string>
+        <string name="title_launcher">Launcher options</string>
 
-        <string name="title_extras">Extras</string>
+        <string name="title_extras">Extra stuff</string>
 
-	<string name="title_dev_tools">Dev Tools</string>
+	<string name="title_dev_tools">Development tools</string>
 	<string name="summary_dev_tools">Miscellaneous tools for developers</string> 
+
+	<string name="title_term">Terminal emulator</string>
+	<string name="summary_term">Run the terminal emulator on your device</string>
 
 </resources>
