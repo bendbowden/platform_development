@@ -136,4 +136,8 @@
         <string name="title_launcher">Launcher settings</string>
 
         <string name="title_extras">Extras</string>
+
+	<string name="title_dev_tools">Dev Tools</string>
+	<string name="summary_dev_tools">Miscellaneous tools for developers</string> 
+
 </resources>
