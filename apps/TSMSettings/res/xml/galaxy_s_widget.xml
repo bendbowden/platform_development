@@ -40,7 +40,7 @@
         android:dependency="galaxy_s_widget_display">
         <intent android:action="android.intent.action.MAIN"
             android:targetPackage="com.android.spare_parts"
-            android:targetClass="com.android.spare_parts.activity.GalaxySWidgetSelectButtons" />
+            android:targetClass="com.android.tsm_settings.activity.GalaxySWidgetSelectButtons" />
      </PreferenceScreen>
 
      <PreferenceScreen android:key="galaxy_s_widget_order_buttons"
@@ -49,7 +49,7 @@
         android:dependency="galaxy_s_widget_display">
         <intent android:action="android.intent.action.MAIN"
             android:targetPackage="com.android.spare_parts"
-            android:targetClass="com.android.spare_parts.activity.GalaxySWidgetOrderButtons" />
+            android:targetClass="com.android.tsm_settings.activity.GalaxySWidgetOrderButtons" />
      </PreferenceScreen>
 
   </PreferenceCategory>

@@ -40,12 +40,12 @@ public class GalaxySWidgetUtil {
                 BUTTON_AIRPLANE, "Airplane mode", R.drawable.stat_airplane_on));
         BUTTONS.put(BUTTON_AUTOROTATE, new GalaxySWidgetUtil.ButtonInfo(
                 BUTTON_AUTOROTATE, "Auto-rotate", R.drawable.stat_orientation_on));
-        BUTTONS.put(BUTTON_BLUETOOTH, new GalaxySWidgetUtil.ButtonInfo(
-                BUTTON_BLUETOOTH, "Bluetooth", R.drawable.stat_bluetooth_on));
+/*BUTTONS.put(BUTTON_BLUETOOTH, new GalaxySWidgetUtil.ButtonInfo(
+                BUTTON_BLUETOOTH, "Bluetooth", R.drawable.stat_bluetooth_on));*/
         BUTTONS.put(BUTTON_BRIGHTNESS, new GalaxySWidgetUtil.ButtonInfo(
                 BUTTON_BRIGHTNESS, "Brightness", R.drawable.stat_brightness_on));
-        BUTTONS.put(BUTTON_FLASHLIGHT, new GalaxySWidgetUtil.ButtonInfo(
-                BUTTON_FLASHLIGHT, "Flashlight", R.drawable.stat_flashlight_on));
+/* BUTTONS.put(BUTTON_FLASHLIGHT, new GalaxySWidgetUtil.ButtonInfo(
+                BUTTON_FLASHLIGHT, "Flashlight", R.drawable.stat_flashlight_on));*/
         BUTTONS.put(BUTTON_GPS, new GalaxySWidgetUtil.ButtonInfo(
                 BUTTON_GPS, "GPS", R.drawable.stat_gps_on));
         BUTTONS.put(BUTTON_LOCKSCREEN, new GalaxySWidgetUtil.ButtonInfo(
@@ -76,7 +76,7 @@ BUTTON_WIFIAP, "Wireless access-point", R.drawable.stat_wifi_ap_on));*/
 
     private static final String BUTTON_DELIMITER = "|";
     private static final String BUTTONS_DEFAULT = BUTTON_WIFI
-                             + BUTTON_DELIMITER + BUTTON_BLUETOOTH
+                             + BUTTON_DELIMITER + BUTTON_MOBILEDATA
                              + BUTTON_DELIMITER + BUTTON_GPS
                              + BUTTON_DELIMITER + BUTTON_SOUND;
 
