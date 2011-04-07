@@ -18,7 +18,7 @@ limitations under the License.
     android:orientation="vertical"
     android:gravity="center_vertical" >
 
-    <com.android.spare_parts.widget.TouchInterceptor
+    <com.android.tsm_settings.widget.TouchInterceptor
         android:id="@android:id/list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
